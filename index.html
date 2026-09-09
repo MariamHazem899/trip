@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tripify | Travel & Tourism Hub</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+        <div class="container nav-container">
+
+            <a href="#home" class="logo">
+                <i class="fa-solid fa-plane-departure"></i>
+                <span>Tripify</span>
+            </a>
+
+            <button class="menu-btn" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="nav-links" id="navLinks">
+
+                <a href="#home">
+                    <i class="fa-solid fa-house"></i>
+                    الرئيسية
+                </a>
+
+                <a href="#destinations">
+                    <i class="fa-solid fa-location-dot"></i>
+                    الوجهات
+                </a>
+
+                <a href="#hotels">
+                    <i class="fa-solid fa-hotel"></i>
+                    الفنادق
+                </a>
+
+                <a href="#planner">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    مخطط الرحلة
+                </a>
+
+                <a href="#community">
+                    <i class="fa-solid fa-users"></i>
+                    المجتمع
+                </a>
+
+                <a href="#bookings">
+                    <i class="fa-solid fa-suitcase-rolling"></i>
+                    حجوزاتي
+                </a>
+
+                <a href="#profile">
+                    <i class="fa-solid fa-user"></i>
+                    حسابي
+                </a>
+
+                <button class="theme-btn" onclick="toggleTheme()" id="themeBtn">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- ================= MAIN APP ================= -->
+    <main id="app"></main>
+
+
+    <!-- ================= MODAL ================= -->
+    <div class="modal-overlay" id="modal">
+        <div class="modal-box">
+            <button class="close-modal" onclick="closeModal()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+
+    <!-- ================= TOAST ================= -->
+    <div class="toast" id="toast">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toastMessage">تمت العملية بنجاح</span>
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+            <div>
+                <div class="logo footer-logo">
+                    <i class="fa-solid fa-plane-departure"></i>
+                    Tripify
+                </div>
+
+                <p>
+                    منصتك المتكاملة لاكتشاف أجمل الوجهات
+                    وحجز الرحلات والفنادق بسهولة.
+                </p>
+            </div>
+
+            <div>
+                <h3>روابط سريعة</h3>
+
+                <a href="#home">الرئيسية</a>
+                <a href="#destinations">الوجهات</a>
+                <a href="#hotels">الفنادق</a>
+                <a href="#planner">مخطط الرحلة</a>
+            </div>
+
+            <div>
+                <h3>تواصل معنا</h3>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    info@tripify.com
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    +20 100 000 0000
+                </p>
+            </div>
+
+            <div>
+                <h3>تابعنا</h3>
+
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 Tripify - جميع الحقوق محفوظة
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
