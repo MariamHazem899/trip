@@ -401,7 +401,7 @@ function renderHome() {
                 <div class="hero-content">
 
                     <h1>
-                        اكتشف العالم مع Tripify 🌍
+                    اهلا بكم فيTripify ♥️
                     </h1>
 
                     <p>
