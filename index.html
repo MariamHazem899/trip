@@ -3,331 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>مدونتي العربية</title>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: "Tahoma", "Arial", sans-serif;
-            background: #f5f7fa;
-            color: #222;
-            line-height: 1.8;
-        }
-
-        /* الشريط العلوي */
-        header {
-            background: linear-gradient(135deg, #2563eb, #ed583a);
-            color: white;
-            padding: 20px 7%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        .logo {
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-right: 20px;
-            font-size: 16px;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: #fde68a;
-        }
-
-        /* القسم الرئيسي */
-        .hero {
-            background: white;
-            padding: 70px 20px;
-            text-align: center;
-            border-bottom: 1px solid #eee;
-        }
-
-        .hero h1 {
-            font-size: 42px;
-            color: #1e293b;
-            margin-bottom: 15px;
-        }
-
-        .hero p {
-            color: #64748b;
-            font-size: 18px;
-            max-width: 700px;
-            margin: auto;
-        }
-
-        /* المحتوى */
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 45px auto;
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 30px;
-        }
-
-        /* المقالات */
-        .articles {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-        }
-
-        .post {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .post:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .post .date {
-            color: #7c3aed;
-            font-size: 14px;
-            margin-bottom: 8px;
-        }
-
-        .post h2 {
-            color: #1e293b;
-            margin-bottom: 10px;
-            font-size: 25px;
-        }
-
-        .post p {
-            color: #64748b;
-            margin-bottom: 15px;
-        }
-
-        .read-more {
-            display: inline-block;
-            background: #2563eb;
-            color: white;
-            padding: 8px 18px;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-
-        .read-more:hover {
-            background: #1d4ed8;
-        }
-
-        /* القائمة الجانبية */
-        aside {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-        }
-
-        .widget {
-            background: white;
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
-        }
-
-        .widget h3 {
-            color: #1e293b;
-            margin-bottom: 15px;
-            border-right: 4px solid #7c3aed;
-            padding-right: 10px;
-        }
-
-        .widget ul {
-            list-style: none;
-        }
-
-        .widget li {
-            padding: 8px 0;
-            border-bottom: 1px solid #eee;
-        }
-
-        .widget li:last-child {
-            border-bottom: none;
-        }
-
-        .widget a {
-            color: #475569;
-            text-decoration: none;
-        }
-
-        .widget a:hover {
-            color: #2563eb;
-        }
-
-        /* التذييل */
-        footer {
-            background: #0f172a;
-            color: #cbd5e1;
-            text-align: center;
-            padding: 30px 15px;
-            margin-top: 50px;
-        }
-
-        footer p {
-            margin: 5px;
-        }
-
-        /* الشاشات الصغيرة */
-        @media (max-width: 768px) {
-            header {
-                justify-content: center;
-                text-align: center;
-            }
-
-            nav a {
-                margin: 0 8px;
-            }
-
-            .hero h1 {
-                font-size: 32px;
-            }
-
-            .container {
-                grid-template-columns: 1fr;
-            }
-
-            .post h2 {
-                font-size: 22px;
-            }
-        }
-    </style>
+    <title>Weather............</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- رأس الموقع -->
-    <header>
-        <div class="logo">مدونتي</div>
-
-        <nav>
-            <a href="#">الرئيسية</a>
-            <a href="#articles">المقالات</a>
-            <a href="#about">من نحن</a>
-            <a href="#contact">تواصل معنا</a>
-        </nav>
-    </header>
-
-    <!-- المقدمة -->
-    <section class="hero">
-        <h1>مرحباً بك في مدونتي العربية</h1>
-        <p>
-            مساحة لمشاركة المقالات والأفكار والمعرفة في التقنية،
-            الثقافة، تطوير الذات والحياة اليومية.
-        </p>
-    </section>
-
-    <!-- المحتوى -->
-    <main class="container">
-
-        <!-- المقالات -->
-        <section class="articles" id="articles">
-
-            <article class="post">
-                <div class="date">26 أغسطس 2026</div>
-
-                <h2>كيف تبدأ رحلتك في تعلم البرمجة؟</h2>
-
-                <p>
-                    تعلم البرمجة أصبح من المهارات المهمة في العصر الحديث.
-                    في هذا المقال نستعرض أهم الخطوات التي تساعدك على
-                    البدء بطريقة صحيحة ومنظمة.
-                </p>
-
-                <a href="#" class="read-more">اقرأ المزيد</a>
-            </article>
-
-            <article class="post">
-                <div class="date">20 أغسطس 2026</div>
-
-                <h2>5 نصائح لتنظيم وقتك</h2>
-
-                <p>
-                    إدارة الوقت تساعدك على تحقيق أهدافك وتقليل التوتر.
-                    تعرف على مجموعة من النصائح العملية التي يمكنك
-                    تطبيقها يومياً.
-                </p>
-
-                <a href="#" class="read-more">اقرأ المزيد</a>
-            </article>
-
-            <article class="post">
-                <div class="date">15 أغسطس 2026</div>
-
-                <h2>أهمية القراءة في تطوير الذات</h2>
-
-                <p>
-                    القراءة تمنحك فرصة لاكتساب المعرفة وتوسيع مداركك.
-                    اكتشف كيف يمكن أن تجعل القراءة عادة يومية مفيدة.
-                </p>
-
-                <a href="#" class="read-more">اقرأ المزيد</a>
-            </article>
-
-        </section>
-
-        <!-- القائمة الجانبية -->
-        <aside>
-
-            <div class="widget" id="about">
-                <h3>عن المدونة</h3>
-
-                <p>
-                    مدونة عربية تهتم بنشر المحتوى المفيد
-                    في مجالات التقنية والتعليم وتطوير الذات.
-                </p>
+    <div class="app-layout">
+        <aside class="search-sidebar">
+            <div class="brand-zone">
+                <h3 id="welcome-message">لوحة الطقس</h3>
             </div>
 
-            <div class="widget">
-                <h3>التصنيفات</h3>
-
-                <ul>
-                    <li><a href="#">التقنية</a></li>
-                    <li><a href="#">البرمجة</a></li>
-                    <li><a href="#">تطوير الذات</a></li>
-                    <li><a href="#">التعليم</a></li>
-                    <li><a href="#">الثقافة</a></li>
-                </ul>
+            <div class="search-group">
+                <div class="input-wrapper">
+                    <input type="text" id="search-input" placeholder="ابحث عن مدينة...">
+                    <button id="geo-btn" class="geo-btn" title="موقعي الحالي">📍</button>
+                </div>
+                <button id="search-btn">بحث</button>
             </div>
 
-            <div class="widget">
-                <h3>مقالات شائعة</h3>
+            <div id="error-box" class="error-box hidden"></div>
 
-                <ul>
-                    <li><a href="#">أفضل طرق تعلم البرمجة</a></li>
-                    <li><a href="#">كيف تنظم يومك؟</a></li>
-                    <li><a href="#">مستقبل التقنية</a></li>
-                </ul>
+            <div class="history-section">
+                <h4>المحطات الأخيرة</h4>
+                <div id="history-list"></div>
             </div>
-
         </aside>
 
-    </main>
+        <main class="main-display">
+            <section id="weather-hero" class="weather-hero">
+                <div class="empty-state">جاري قراءة تفاصيل الطقس الحية...</div>
+            </section>
 
-    <!-- التذييل -->
-    <footer id="contact">
-        <p>© 2026 مدونتي العربية - جميع الحقوق محفوظة</p>
-        <p>صُمم بحب ❤️ باستخدام HTML و CSS</p>
-    </footer>
+            <section class="forecast-section">
+                <h4>التوقعات لـ 5 أيام قادمة</h4>
+                <div id="forecast-grid" class="forecast-grid"></div>
+            </section>
+        </main>
+    </div>
 
+    <script src="app.js"></script>
 </body>
 </html>
